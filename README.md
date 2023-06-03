@@ -13,7 +13,7 @@ In this assignment, we are trying to make the code  modular. There are 3 files
 
 
 ## Models.py 
-### Intial Layer
+### Intialization
 
 - CONV1 -  Convolution layer has  1 input channel and 32 output channels. A kernel of size 3*3 is convolved on the input image.
 - CONV2 -  Second Convolution layer has 32 input channels(from previous layer)  and 64 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
