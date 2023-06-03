@@ -4,37 +4,22 @@
 
 # Backpropogation
 
-In this assignment, we are trying to make the code into modular. There are 3 files 
+In this assignment, we are trying to make the code  modular. There are 3 files 
 1. Models.py 
 2. Utils.py
 3. S5.ipynb
 
 [![Screen-Shot-2021-05-28-at-10-37-20-PM.png](https://i.postimg.cc/mrvJsjvf/Screen-Shot-2021-05-28-at-10-37-20-PM.png)](https://postimg.cc/hJ0p8L4p)
 
-- Inputs ( ![formula](https://render.githubusercontent.com/render/math?math=i_1) and ![formula](https://render.githubusercontent.com/render/math?math=i_2))
-- Weights (![formula](https://render.githubusercontent.com/render/math?math=w_1),![formula](https://render.githubusercontent.com/render/math?math=w_2),![formula](https://render.githubusercontent.com/render/math?math=w_3),![formula](https://render.githubusercontent.com/render/math?math=w_4),![formula](https://render.githubusercontent.com/render/math?math=w_5),![formula](https://render.githubusercontent.com/render/math?math=w_6),![formula](https://render.githubusercontent.com/render/math?math=w_7),![formula](https://render.githubusercontent.com/render/math?math=w_8))
-- Hidden Neurons (![formula](https://render.githubusercontent.com/render/math?math=h_1),![formula](https://render.githubusercontent.com/render/math?math=h_2))
-- Output Neurons (![formula](https://render.githubusercontent.com/render/math?math=o_1), ![formula](https://render.githubusercontent.com/render/math?math=o_2))
-- Activated Neurons (![formula](https://render.githubusercontent.com/render/math?math=out_{h1}),![formula](https://render.githubusercontent.com/render/math?math=out_{h2}),![formula](https://render.githubusercontent.com/render/math?math=out_{o1}),![formula](https://render.githubusercontent.com/render/math?math=out_{o2}))
-- Error because of outputs (![formula](https://render.githubusercontent.com/render/math?math=E_{1}),![formula](https://render.githubusercontent.com/render/math?math=E_{2}))
-- Total Error (![formula](https://render.githubusercontent.com/render/math?math=E_{total}))
-- There's no bias!
 
-## Forward Propagation
 
-- We start with our inital inputs as ![formula](https://render.githubusercontent.com/render/math?math=i_1%20=%200.05) and ![formula](https://render.githubusercontent.com/render/math?math=i_2%20=%200.1)
-- The outputs we want to acheive are ![formula](https://render.githubusercontent.com/render/math?math=t_1%20=%200.01) and ![formula](https://render.githubusercontent.com/render/math?math=t_2%20=%200.99) 
-- The initial weights are ![formula](https://render.githubusercontent.com/render/math?math=w_1%20=%200.15) ,![formula](https://render.githubusercontent.com/render/math?math=w_2%20=%200.2) , ![formula](https://render.githubusercontent.com/render/math?math=w_3%20=%200.25) , ![formula](https://render.githubusercontent.com/render/math?math=w_4%20=%200.3)
-- We perform a FORWARD PASS through the network
-- The h1 is calulated by: ![formula](https://render.githubusercontent.com/render/math?math=h_{1}%20=%20i_{1}\times%20w_{1}%2Bi_{2}\times%20w_{2})
-- Similarly, h2 is calulated by: ![formula](https://render.githubusercontent.com/render/math?math=h_{2}%20=%20i_{1}\times%20w_{3}%2Bi_{2}\times%20w_{4})
-- The output of these hidden neurons are given after performing Sigmoid Activation:
-- Sigmoid is given as :  ![formula](https://render.githubusercontent.com/render/math?math=\sigma(h)=(1%20/%201%20%2B%20\exp(h)))
-- Thus, a_h1 is given by: ![formula](https://render.githubusercontent.com/render/math?math=a_{h1}=\sigma({h_1}))
-- And similarly, ![formula](https://render.githubusercontent.com/render/math?math=a_{h2}=\sigma({h_2}))
-- Using the same rules, we get outputs as:
-- ![formula](https://render.githubusercontent.com/render/math?math=o_1=w_5a_{h_1}%2Bw_6a_{h_2}%20\%20\%20and%20\%20\%20o_2=w_7a_{h_1}%2Bw_8a_{h_2})
-- After applying sigmoid: ![formula](https://render.githubusercontent.com/render/math?math=a_{o_1}=\sigma(o_1)\%20\%20and%20\%20\%20a_{o_2}=\sigma(o_2))
+## Models.py 
+
+- CONV1 -  Convolution layer with 1 input channel and 32 output channels. A kernel of size 3*3 is convolved on the input image.
+- CONV2 -  Second Convolution layer with 32 input channels(from previous layer)  and 64 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
+- CONV3 -  Third  Convolution layer with 64  input channels(from previous layer)  and 128 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
+- Fc1 - First Fully Connected layer -  CONV3 layer's output  is  flattened so that it can be sent as input to Fully connected layer
+- Fc2- Second Fully Connected layer -  Gets input as input to Fully connected layer
 
 ## Error Calculation
 - The errors are due to the differences in the expected outputs from the neuron and the received outputs
