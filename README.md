@@ -9,7 +9,6 @@ In this assignment, we are trying to make the code  modular. There are 3 files
 2. Utils.py
 3. S5.ipynb
 
-[![Screen-Shot-2021-05-28-at-10-37-20-PM.png](https://i.postimg.cc/mrvJsjvf/Screen-Shot-2021-05-28-at-10-37-20-PM.png)](https://postimg.cc/hJ0p8L4p)
 
 
 
