@@ -46,6 +46,14 @@ In this assignment, we are trying to make the code  modular. There are 3 files
 
       transforms.Normalize((0.1307,), (0.3081,))
       
+## UTILS.py 
+- All the imports and commonly used code are placed in UTILS.PY file
+
+## S5.IPYNB
+
+- This is the main file which will be run with the given input 
+- Model and Utils files are called internally by this file for modular approach.
+
 
 
 
