@@ -1,8 +1,8 @@
 
 
-# <h1 align = "center">PART-1</h1>
+# <h1 align = "center">session 5 Assignment</h1>
 
-# Backpropogation
+# FIRST NEURAL NETWORK
 
 In this assignment, we are trying to make the code  modular. There are 3 files 
 1. Models.py 
@@ -13,12 +13,14 @@ In this assignment, we are trying to make the code  modular. There are 3 files
 
 
 ## Models.py 
+### Intial Layer
 
-- CONV1 -  Convolution layer with 1 input channel and 32 output channels. A kernel of size 3*3 is convolved on the input image.
-- CONV2 -  Second Convolution layer with 32 input channels(from previous layer)  and 64 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
-- CONV3 -  Third  Convolution layer with 64  input channels(from previous layer)  and 128 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
-- Fc1 - First Fully Connected layer -  CONV3 layer's output  is  flattened so that it can be sent as input to Fully connected layer
-- Fc2- Second Fully Connected layer -  Gets input as input to Fully connected layer
+- CONV1 -  Convolution layer has  1 input channel and 32 output channels. A kernel of size 3*3 is convolved on the input image.
+- CONV2 -  Second Convolution layer has 32 input channels(from previous layer)  and 64 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
+- CONV3 -  Third  Convolution layer has 64  input channels(from previous layer)  and 128 output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
+- CONV4-   Fourth  Convolution layer has  128  input channels(from previous layer)  and 256  output channels. A kernel of size 3*3 is convolved on the out of the previous conv layer .
+- Fc1 - First Fully Connected layer -  CONV4 layer's output  is  flattened so that it can be sent as input to Fully connected layer.
+- Fc2- Second Fully Connected layer -  Gets input as input to Fully connected layer with  10 outputs .
 
 ## Error Calculation
 - The errors are due to the differences in the expected outputs from the neuron and the received outputs
