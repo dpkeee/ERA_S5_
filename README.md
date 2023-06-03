@@ -1,6 +1,6 @@
 
 
-# <h1 align = "center">session 5 Assignment</h1>
+# <h1 align = "center">Session 5 Assignment</h1>
 
 # FIRST NEURAL NETWORK
 
@@ -27,29 +27,7 @@ In this assignment, we are trying to make the code  modular. There are 3 files
 - Criterion Loss Fucntion is used for calculating the Error 
 
 
-      Input
-        |
-    Conv2d(1, 32)
-        |
-    Conv2d(32, 64)
-        |
-    Conv2d(64, 128)
-        |
-    Conv2d(128, 256)
-        |
-       Flatten
-        |
-    Linear(320, 50)
-        |
-    Linear(50, 10)
-        |
-      Output
-
-
-
-
-
-
+  
 ### Data Augmentation
 - The input images were randomly rotated by 10 degress to introduce slightly more variance and have the model generalize better.
 - Transforms.RandomApply([transforms.CenterCrop(22), ], p=0.1): This transformation randomly applies a center crop of size 22x22 to the input with a probability of 0.1. This operation helps to introduce some randomness and diversity in the data.
