@@ -1,6 +1,6 @@
 import torch.nn as nn
 import torch.nn.functional as F
-
+import torch
 from torchsummary import summary
 import tqdm
 from utils import GetCorrectPredCount
@@ -92,7 +92,8 @@ def model_test(model, device, test_loader, criterion):
         test_loss, correct, len(test_loader.dataset),
         100. * correct / len(test_loader.dataset)))
     
-def draw_graphs(train_loss,train_acc,test_loss,test_acc):
+    
+def draw_graphs():
     fig, axs = plt.subplots(2,2,figsize=(15,10))
     axs[0, 0].plot(train_losses)
     axs[0, 0].set_title("Training Loss")
